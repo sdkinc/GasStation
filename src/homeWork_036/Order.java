@@ -11,9 +11,9 @@ public class Order {
     CASH,
   }
 
-  private String name;
-  private double quantity;
-  private PaymentMethod paymentMethod;
+  private final String name;
+  private final double quantity;
+  private final PaymentMethod paymentMethod;
 
   public Order(String name, double quantity, PaymentMethod paymentMethod) {
     this.name = name;
@@ -67,14 +67,6 @@ public class Order {
     System.out.println("Количество топлива: " + quantity + " л");
     double total = quantity * PRICE;
     System.out.println("Стоимость заказа: " + total + " EUR");
-//      switch (paymentMethod) {
-//        case CARD:
-//          System.out.println("Заказ должен быть оплачен картой");
-//          break;
-//        case CASH:
-//          System.out.println("Заказ должен быть оплачен наличными");
-//          break;
-//      }
     switch (paymentMethod) {
       case CARD -> System.out.println("Заказ должен быть оплачен картой");
       case CASH -> System.out.println("Заказ должен быть оплачен наличными");
