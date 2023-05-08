@@ -34,7 +34,7 @@ public class GasStation {
     printOrderList(orderList);
   }
 
-  private static void printOrderList(ArrayList<Order> orderList){
+  private static void printOrderList(ArrayList<Order> orderList) {
     System.out.println();
     System.out.println("====== список чеков ======");
     orderList.forEach(order -> {
@@ -43,6 +43,7 @@ public class GasStation {
         }
     );
   }
+
   private static int readOrdersAmount(Scanner scanner) {
     System.out.print("Введите количество заказов: ");
     while (!scanner.hasNextInt()) {
